@@ -147,4 +147,23 @@ display(['Covariance    = ' num2str(timeCov/totalTime * 100, '%.3f') ' %']);
 display(['Correlation   = ' num2str(timeCorrelation/totalTime * 100, '%.3f') ' %']);
 display('----------------------------------');
 display('----------------------------------');
-    
+X       = [timeReturnA/totalTime, timeMeanA/totalTime, timeDevA/totalTime, ...
+            timeVolA/totalTime, timeCov/totalTime, timeCorrelation/totalTime];
+lables  = {'Log return: '; 'Mean: '; 'Deviation: '; 'Volatility: '; 'Covarance: '; 'Correlation: '};
+explode = [0, 0 , 0, 0, 0, 0];
+h = pie(X);
+    % store percentage value 
+hText = findobj(h,'Type','text');           % text object handles
+percentValues = get(hText,'String');        % percent values
+    % combine percentage and string
+combinedstrings = strcat(lables, percentValues);
+    % Read Extent property of htext object
+oldExtents_cell = get(hText,'Extent');      % cell array
+    % Convert from cell to matrix
+oldExtents = cell2mat(oldExtents_cell);     % numeric array
+hText(1).String = combinedstrings(1);
+hText(2).String = combinedstrings(2);
+hText(3).String = combinedstrings(3);
+hText(4).String = combinedstrings(4);
+hText(5).String = combinedstrings(5);
+hText(6).String = combinedstrings(6);

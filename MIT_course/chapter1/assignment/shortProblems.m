@@ -19,7 +19,7 @@ aMat = aMat + 1;
     %aMat = aMat + 2;
 % prob 3b
 v = [1 2 3 4 5 4 3 2 1];
-bMat = diag(v);
+bMat = diag(v)
 % prob 3c
 v = [1:1:100];
 cMat = reshape(v,[10, 10]);

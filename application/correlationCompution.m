@@ -50,9 +50,9 @@
 %Step 3:    Compute MEAN of compounded rate of return
     disp('Step 3: Compute MEAN of return''s rate');
     tic;
-    meanRetA = sumRetA/256;
+    meanRetA = sumRetA/totalDay;
     toc;
-    meanRetB = sumRetB/256;
+    meanRetB = sumRetB/totalDay;
     
 %Step 4:    Compute deviation of rate of return
     disp('Step 4: Compute DEVIATION of return''s rate');

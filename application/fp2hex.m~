@@ -1,0 +1,33 @@
+% Load indices
+format long;
+lamda = 0.94;
+totalDay = 252;
+
+fileName = 'data.xlsx';
+sheet    = 6;
+
+indexA              = xlsread(fileName, sheet,'D15:D266');
+indexB              = xlsread(fileName, sheet,'E15:E266');
+indexC              = xlsread(fileName, sheet,'P15:P266');
+indexE              = xlsread(fileName, sheet,'AA15:AA266');
+indexF              = xlsread(fileName, sheet,'AL15:AL266');
+
+indexA_hex = zeros(252, 1);
+
+indexA_hex = num2hex(single(indexA));
+indexB_hex = num2hex(single(indexB));
+
+address_int = hex2num('11000000');
+addres
+num2hex([address_int])
+% for i = 1 : 252
+%     address = 11000000 + (i - 1) * 4;
+%     value = indexA_hex(i, :);
+%     display(['mwr 0x' num2str(address) ' 0x' num2str(value)]);
+% end
+% disp('    ----');
+% for i = 1 : 252
+%     address = address + (i - 1) * 4;
+%     value = indexB_hex(i, :);
+%     display(['mwr 0x' num2str(address) ' 0x' num2str(value)]);
+% end

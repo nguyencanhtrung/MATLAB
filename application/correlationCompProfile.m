@@ -1,3 +1,4 @@
+
 % Load indices
     format long;
     lamda       = 0.94;
@@ -5,8 +6,8 @@
         % Load data from excel file
     fileName    = 'data.xlsx';
     sheet       = 6;
-    indexA      = xlsread(fileName, sheet,'D15:D271');
-    indexB      = xlsread(fileName, sheet,'E15:E271');
+    indexA      = xlsread(fileName, sheet,'D15:D266');
+    indexB      = xlsread(fileName, sheet,'E15:E266');
 
         % Instantiation
     len         = length(indexA);
